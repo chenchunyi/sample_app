@@ -17,7 +17,7 @@ gem 'bootstrap-will_paginate', '0.0.6'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :development, :test do
+group :development do
   gem 'sqlite3', '1.3.5'
   # 新增rspec-rails，目的是要用RSpec寫宜個全面的測試套件的測試框架。
   gem 'rspec-rails', '2.10.0'
