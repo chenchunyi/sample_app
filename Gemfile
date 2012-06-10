@@ -1,6 +1,14 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.5'
+gem 'jquery-rails', '2.0.0'
+gem 'bootstrap-sass', '2.0.0'
+gem 'bcrypt-ruby', '3.0.1'
+gem 'faker', '1.0.1'
+gem 'will_paginate', '3.0.3'
+gem 'bootstrap-will_paginate', '0.0.6'
+# 增加Bootstrap and custom CSS
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -33,14 +41,13 @@ gem 'jquery-rails', '2.0.0'
 
 # 使用capybara使我們能夠模擬用戶用自然的英語
 group :test do
-  gem 'rspec-rails', '2.10.0'
   gem 'capybara', '1.1.2'
-  # System-dependent gems
-  # Test gems on Macintosh OS X
-  gem 'rb-fsevent', '0.9.1', :require => false
-  gem 'growl', '1.0.3'
-  gem 'guard-spork', '0.3.2'
+  gem 'factory_girl_rails', '1.4.0'
+  gem 'cucumber-rails', '1.2.1', :require => false
+  gem 'database_cleaner', '0.7.0'
+  gem 'guard-spork', '0.3.2'  
   gem 'spork', '0.9.0'
+  gem 'launchy', '2.1.0'
 end
 
 group :production do
