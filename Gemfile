@@ -9,6 +9,10 @@ group :development, :test do
   gem 'sqlite3', '1.3.5'
   # 新增rspec-rails，目的是要用RSpec寫宜個全面的測試套件的測試框架。
   gem 'rspec-rails', '2.10.0'
+  gem 'guard-rspec', '0.5.5'
+
+  # # use PostgreSQL instead of SQLite
+  # gem 'rspec-rails', '2.10.0'
 end
 
 
@@ -29,7 +33,14 @@ gem 'jquery-rails', '2.0.0'
 
 # 使用capybara使我們能夠模擬用戶用自然的英語
 group :test do
+  gem 'rspec-rails', '2.10.0'
   gem 'capybara', '1.1.2'
+  # System-dependent gems
+  # Test gems on Macintosh OS X
+  gem 'rb-fsevent', '0.9.1', :require => false
+  gem 'growl', '1.0.3'
+  gem 'guard-spork', '0.3.2'
+  gem 'spork', '0.9.0'
 end
 
 group :production do

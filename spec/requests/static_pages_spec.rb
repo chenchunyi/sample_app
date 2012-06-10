@@ -1,7 +1,12 @@
 require 'spec_helper'
 
+
 # 把名稱更改為 Static Pages
 describe "Static Pages" do
+  # 宣告base_title為基本的標題
+  let(:base_title) { "Sticker Sample App" }
+
+
 	# 改成 Home Page
   describe "Home Page" do
   	# ““內容可以改成自己的描述。
@@ -13,7 +18,7 @@ describe "Static Pages" do
 
     it "should have the title 'Home'" do
       visit '/static_pages/home'
-      page.should have_selector('title', :text => "Sticker Sample App | Home")
+      page.should have_selector('title', :text => "#{base_title} | Home")
     end
 
 
@@ -29,7 +34,7 @@ describe "Static Pages" do
 
     it "should have the title 'Help'" do
       visit '/static_pages/help'
-      page.should have_selector('title', :text => "Sticker Sample App | Help")
+      page.should have_selector('title', :text => "#{base_title} | Help")
     end
   end
 
@@ -45,9 +50,21 @@ describe "Static Pages" do
 
     it "should have the title 'About Us'" do
       visit '/static_pages/about'
-      page.should have_selector('title', :text => "Sticker Sample App | About Us")
+      page.should have_selector('title', :text => "#{base_title} | About Us")
+    end
+  end
+
+  describe "Contact page" do
+
+    it "should have the h1 'Contact'" do
+      visit '/static_pages/contact'
+      page.should have_selector('h1', :text => 'Contact')
     end
 
+    it "should have the title 'Contact'" do
+      visit '/static_pages/contact'
+      page.should have_selector('title', :text => "#{base_title} | Contact")
+    end
   end
 
 end
