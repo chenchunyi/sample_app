@@ -112,6 +112,7 @@ describe User do
     end
   end
 
+<<<<<<< HEAD
   describe "email address with mixed case" do
     let(:mixed_case_email) { "Foo@ExAMPle.CoM" }
 
@@ -121,6 +122,8 @@ describe User do
       @user.reload.email.should == mixed_case_email.downcase
     end
   end
+=======
+>>>>>>> sign-up
   
 end
 
